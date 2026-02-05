@@ -74,11 +74,11 @@ function MultiAgentInbox() {
         <div>
           <div className='w-[90%] mx-auto py-20 grid lg:grid-cols-2 justify-center items-center gap-12'>
             <div className='w-full h-full flex flex-col justify-center'>
-              <h1>Multi-Agent Inbox</h1>
-              <p className='text-justify text-gray-600 mb-4'>One inbox for your entire team. Collaborate seamlessly, assign conversations, and deliver exceptional customer experiences together.</p>
-              <div className='flex gap-4'>
-                <button className='bg-[#333333] text-[#f2f2f2] py-4 px-8 border cursor-pointer'>Start Free Trial</button>
-                <button className='bg-[#f2f2f2] text-[#333333] py-4 px-8 border cursor-pointer'>Book Demo</button>
+              <h1 className='text-4xl mb-3'>Multi-Agent Inbox</h1>
+              <p className='text-justify text-lg text-gray-500 mb-3'>One inbox for your entire team. Collaborate seamlessly, assign conversations, and deliver exceptional customer experiences together.</p>
+              <div className='flex gap-4 mb-3'>
+                <button className='py-4 px-8 border cursor-pointer'>Start Free Trial</button>
+                <button className='py-4 px-8 border cursor-pointer'>Book Demo</button>
               </div>
             </div>
             <div className='rounded-lg w-full h-full flex justify-center items-center'>
@@ -91,16 +91,15 @@ function MultiAgentInbox() {
         <div className='bg-[#f9f9f9]'>
           <div className='w-[90%] mx-auto py-20 flex flex-col gap-12'>
             <div className='text-center h-fit'>
-              <h2>Work Together, Serve Better</h2>
-              <p className='text-gray-600'>Stop manually following up. Let sequences do the heavy lifting while you focus on closing deals.</p>
-              <p className='text-gray-600'></p>
+              <h2 className='text-3xl mb-3'>Work Together, Serve Better</h2>
+              <p className='text-lg text-gray-500 mb-3'>Stop manually following up. Let sequences do the heavy lifting while you focus on closing deals.</p>
             </div>
             <div className='grid lg:grid-cols-3 gap-4'>
               {benefits.map((benefit, index) => (
-                <div className='bg-white py-4 px-6 flex flex-col justify-center items-center rounded-lg shadow-sm transition-shadow duration-300'>
-                  <span className='mb-2'>{benefit.icon}</span>
-                  <h4>{benefit.title}</h4>
-                  <span className='text-center text-gray-600'>{benefit.description}</span>
+                <div key={index} className='bg-white py-4 px-6 flex flex-col justify-center items-center rounded-lg shadow-sm transition-shadow duration-300'>
+                  <span className='mb-3'>{benefit.icon}</span>
+                  <h4 className='text-lg mb-3'>{benefit.title}</h4>
+                  <span className='text-center text-[16px] text-gray-500 mb-3'>{benefit.description}</span>
                 </div>
               ))}
             </div>
@@ -111,13 +110,13 @@ function MultiAgentInbox() {
         <div>
           <div className='w-[90%] mx-auto py-20 grid lg:grid-cols-2 gap-12 items-center'>
             <div className='w-full h-full flex flex-col justify-center'>
-              <h2>Built for Team Productivity</h2>
-              <p className='text-justify text-gray-600 mb-4'>Every feature designed to help your team work faster and smarter together.</p>
+              <h2 className='text-3xl mb-3'>Built for Team Productivity</h2>
+              <p className='text-justify text-lg text-gray-500 mb-3'>Every feature designed to help your team work faster and smarter together.</p>
               <div className='grid grid-cols-2 gap-2'>
                 {features.map((feature, index) => (
-                  <div className='flex gap-2 items-center mb-2'>
+                  <div key={index} className='flex gap-2 items-center mb-3'>
                     <span><CircleCheck size={20} className='text-green-600' /></span>
-                    <span className='text-gray-600'>{feature.description}</span>
+                    <span className='text-[16px] text-gray-500'>{feature.description}</span>
                   </div>
                 ))}
               </div>
@@ -147,14 +146,14 @@ function MultiAgentInbox() {
         <div className='bg-[#f9f9f9]'>
           <div className='w-[90%] mx-auto py-20 flex flex-col gap-12'>
             <div className='text-center h-fit'>
-              <h2>Perfect for Any Team</h2>
-              <p className='text-gray-600'>Whether you're a support team or sales team, multi-agent inbox adapts to your workflow.</p>
+              <h2 className='text-3xl mb-3'>Perfect for Any Team</h2>
+              <p className='text-lg text-gray-500 mb-3'>Whether you're a support team or sales team, multi-agent inbox adapts to your workflow.</p>
             </div>
             <div className='grid lg:grid-cols-2 gap-4'>
               {useCases.map((useCase, index) => (
-                <div className='bg-white py-4 px-6 rounded-lg shadow-sm'>
-                  <h4>{useCase.title}</h4>
-                  <span className='text-gray-600'>{useCase.description}</span>
+                <div key={index} className='bg-white py-4 px-6 rounded-lg shadow-sm'>
+                  <h4 className='text-lg mb-3'>{useCase.title}</h4>
+                  <span className='text-[16px] text-gray-500 mb-3'>{useCase.description}</span>
                 </div>
               ))}
             </div>
